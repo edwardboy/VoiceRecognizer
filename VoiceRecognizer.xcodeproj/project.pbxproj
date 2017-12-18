@@ -1,0 +1,933 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F20528F11FE28B670086537B /* SGVoiceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F20528F01FE28B670086537B /* SGVoiceRecognizer.m */; };
+		F2094F3B1FE2607F00790E11 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F3A1FE2607F00790E11 /* libsqlite3.0.tbd */; };
+		F2094F3D1FE2608800790E11 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F3C1FE2608800790E11 /* libstdc++.6.0.9.tbd */; };
+		F2094F3F1FE2609400790E11 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F3E1FE2609400790E11 /* libiconv.2.4.0.tbd */; };
+		F2094F411FE260A200790E11 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F401FE260A200790E11 /* libc++.tbd */; };
+		F2094F431FE260AB00790E11 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F421FE260AB00790E11 /* libz.1.2.5.tbd */; };
+		F2094F451FE260C900790E11 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F441FE260C900790E11 /* SystemConfiguration.framework */; };
+		F2094F471FE260D200790E11 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F461FE260D200790E11 /* AudioToolbox.framework */; };
+		F2094F491FE260DA00790E11 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F481FE260DA00790E11 /* CFNetwork.framework */; };
+		F2094F4B1FE260E300790E11 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F4A1FE260E300790E11 /* CoreLocation.framework */; };
+		F2094F4D1FE260ED00790E11 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F4C1FE260ED00790E11 /* CoreTelephony.framework */; };
+		F2094F921FE27AED00790E11 /* .gitIgnore in Resources */ = {isa = PBXBuildFile; fileRef = F2094F541FE27AEC00790E11 /* .gitIgnore */; };
+		F2094F931FE27AED00790E11 /* VoiceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F2094F681FE27AEC00790E11 /* VoiceRecognizer.m */; };
+		F2094F941FE27AED00790E11 /* bds_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F6C1FE27AEC00790E11 /* bds_license.dat */; };
+		F2094F951FE27AED00790E11 /* bds_easr_basic_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F6D1FE27AEC00790E11 /* bds_easr_basic_model.dat */; };
+		F2094F961FE27AED00790E11 /* bds_easr_mfe_cmvn.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F6E1FE27AEC00790E11 /* bds_easr_mfe_cmvn.dat */; };
+		F2094F971FE27AED00790E11 /* bds_easr_mfe_dnn.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F6F1FE27AEC00790E11 /* bds_easr_mfe_dnn.dat */; };
+		F2094F981FE27AED00790E11 /* bds_easr_gramm.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F701FE27AEC00790E11 /* bds_easr_gramm.dat */; };
+		F2094F991FE27AED00790E11 /* bds_easr_wakeup_words.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F711FE27AEC00790E11 /* bds_easr_wakeup_words.dat */; };
+		F2094F9A1FE27AED00790E11 /* bds_easr_dnn_wakeup_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F721FE27AEC00790E11 /* bds_easr_dnn_wakeup_model.dat */; };
+		F2094F9B1FE27AED00790E11 /* record_end.caf in Resources */ = {isa = PBXBuildFile; fileRef = F2094F751FE27AEC00790E11 /* record_end.caf */; };
+		F2094F9C1FE27AED00790E11 /* record_start.caf in Resources */ = {isa = PBXBuildFile; fileRef = F2094F761FE27AEC00790E11 /* record_start.caf */; };
+		F2094F9D1FE27AED00790E11 /* record_cancel.caf in Resources */ = {isa = PBXBuildFile; fileRef = F2094F771FE27AEC00790E11 /* record_cancel.caf */; };
+		F2094F9E1FE27AED00790E11 /* record_success.caf in Resources */ = {isa = PBXBuildFile; fileRef = F2094F781FE27AEC00790E11 /* record_success.caf */; };
+		F2094F9F1FE27AED00790E11 /* record_fail.caf in Resources */ = {isa = PBXBuildFile; fileRef = F2094F791FE27AEC00790E11 /* record_fail.caf */; };
+		F2094FA01FE27AED00790E11 /* lightBlue.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F7B1FE27AEC00790E11 /* lightBlue.bundle */; };
+		F2094FA11FE27AED00790E11 /* lightOrange.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F7C1FE27AEC00790E11 /* lightOrange.bundle */; };
+		F2094FA21FE27AED00790E11 /* darkRed.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F7D1FE27AEC00790E11 /* darkRed.bundle */; };
+		F2094FA31FE27AED00790E11 /* defaultTheme.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F7E1FE27AEC00790E11 /* defaultTheme.bundle */; };
+		F2094FA41FE27AED00790E11 /* lightGreen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F7F1FE27AEC00790E11 /* lightGreen.bundle */; };
+		F2094FA51FE27AED00790E11 /* darkOrange.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F801FE27AEC00790E11 /* darkOrange.bundle */; };
+		F2094FA61FE27AED00790E11 /* defaultFullScreenTheme.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F811FE27AEC00790E11 /* defaultFullScreenTheme.bundle */; };
+		F2094FA71FE27AED00790E11 /* darkGreen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F821FE27AEC00790E11 /* darkGreen.bundle */; };
+		F2094FA81FE27AED00790E11 /* lightRed.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F831FE27AEC00790E11 /* lightRed.bundle */; };
+		F2094FA91FE27AED00790E11 /* darkBlue.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2094F841FE27AEC00790E11 /* darkBlue.bundle */; };
+		F2094FAA1FE27AED00790E11 /* English_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F861FE27AEC00790E11 /* English_Speech_Female.dat */; };
+		F2094FAB1FE27AED00790E11 /* offline_engine_tmp_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F871FE27AEC00790E11 /* offline_engine_tmp_license.dat */; };
+		F2094FAC1FE27AED00790E11 /* English_Text.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F881FE27AEC00790E11 /* English_Text.dat */; };
+		F2094FAD1FE27AED00790E11 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F2094F891FE27AEC00790E11 /* .gitignore */; };
+		F2094FAE1FE27AED00790E11 /* English_Speech_Male.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F8A1FE27AEC00790E11 /* English_Speech_Male.dat */; };
+		F2094FAF1FE27AED00790E11 /* Chinese_Speech_Male.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F8B1FE27AEC00790E11 /* Chinese_Speech_Male.dat */; };
+		F2094FB01FE27AED00790E11 /* Chinese_Text.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F8C1FE27AEC00790E11 /* Chinese_Text.dat */; };
+		F2094FB11FE27AED00790E11 /* Chinese_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = F2094F8D1FE27AEC00790E11 /* Chinese_Speech_Female.dat */; };
+		F2094FB21FE27AED00790E11 /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094F901FE27AEC00790E11 /* libBaiduSpeechSDK.a */; };
+		F2094FB31FE27AED00790E11 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F2094F911FE27AEC00790E11 /* .gitignore */; };
+		F2094FB81FE27BBC00790E11 /* libSogouSemantic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2094FB71FE27BBC00790E11 /* libSogouSemantic.a */; };
+		F2094FBE1FE285A000790E11 /* SGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2094FBD1FE285A000790E11 /* SGViewController.m */; };
+		F2094FC11FE285CA00790E11 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2094FC01FE285CA00790E11 /* ListViewController.m */; };
+		F22F7F691FDE90E70002498A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F7F681FDE90E70002498A /* AppDelegate.m */; };
+		F22F7F6C1FDE90E70002498A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F7F6B1FDE90E70002498A /* ViewController.m */; };
+		F22F7F6F1FDE90E70002498A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22F7F6D1FDE90E70002498A /* Main.storyboard */; };
+		F22F7F711FDE90E70002498A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22F7F701FDE90E70002498A /* Assets.xcassets */; };
+		F22F7F741FDE90E70002498A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22F7F721FDE90E70002498A /* LaunchScreen.storyboard */; };
+		F22F7F771FDE90E70002498A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F7F761FDE90E70002498A /* main.m */; };
+		F22F7F811FDE90E70002498A /* VoiceRecognizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F7F801FDE90E70002498A /* VoiceRecognizerTests.m */; };
+		F22F7F8C1FDE90E70002498A /* VoiceRecognizerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F7F8B1FDE90E70002498A /* VoiceRecognizerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F22F7F7D1FDE90E70002498A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22F7F5C1FDE90E70002498A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22F7F631FDE90E70002498A;
+			remoteInfo = VoiceRecognizer;
+		};
+		F22F7F881FDE90E70002498A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22F7F5C1FDE90E70002498A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22F7F631FDE90E70002498A;
+			remoteInfo = VoiceRecognizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F20528EF1FE28B670086537B /* SGVoiceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGVoiceRecognizer.h; sourceTree = "<group>"; };
+		F20528F01FE28B670086537B /* SGVoiceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGVoiceRecognizer.m; sourceTree = "<group>"; };
+		F2094F3A1FE2607F00790E11 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F2094F3C1FE2608800790E11 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		F2094F3E1FE2609400790E11 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		F2094F401FE260A200790E11 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		F2094F421FE260AB00790E11 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		F2094F441FE260C900790E11 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F2094F461FE260D200790E11 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F2094F481FE260DA00790E11 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F2094F4A1FE260E300790E11 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F2094F4C1FE260ED00790E11 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F2094F511FE27AEC00790E11 /* BDSWakeupParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSWakeupParameters.h; sourceTree = "<group>"; };
+		F2094F521FE27AEC00790E11 /* BDSASRParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSASRParameters.h; sourceTree = "<group>"; };
+		F2094F531FE27AEC00790E11 /* BDSEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSEventManager.h; sourceTree = "<group>"; };
+		F2094F541FE27AEC00790E11 /* .gitIgnore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitIgnore; sourceTree = "<group>"; };
+		F2094F551FE27AEC00790E11 /* BDSUploaderDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSUploaderDefines.h; sourceTree = "<group>"; };
+		F2094F561FE27AEC00790E11 /* BDSASRDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSASRDefines.h; sourceTree = "<group>"; };
+		F2094F571FE27AEC00790E11 /* BDSUploaderParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSUploaderParameters.h; sourceTree = "<group>"; };
+		F2094F581FE27AEC00790E11 /* BDSWakeupDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSWakeupDefines.h; sourceTree = "<group>"; };
+		F2094F5A1FE27AEC00790E11 /* BDRecognizerViewParamsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRecognizerViewParamsObject.h; sourceTree = "<group>"; };
+		F2094F5B1FE27AEC00790E11 /* BDRecognizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRecognizerViewController.h; sourceTree = "<group>"; };
+		F2094F5C1FE27AEC00790E11 /* BDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTheme.h; sourceTree = "<group>"; };
+		F2094F5D1FE27AEC00790E11 /* BDRecognizerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRecognizerViewDelegate.h; sourceTree = "<group>"; };
+		F2094F5F1FE27AEC00790E11 /* BDSSpeechSynthesizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerDelegate.h; sourceTree = "<group>"; };
+		F2094F601FE27AEC00790E11 /* BDS_EttsModelManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDS_EttsModelManagerInterface.h; sourceTree = "<group>"; };
+		F2094F611FE27AEC00790E11 /* BDSBuiltInPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSBuiltInPlayer.h; sourceTree = "<group>"; };
+		F2094F621FE27AEC00790E11 /* BDSMixedModeSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSMixedModeSynthesizer.h; sourceTree = "<group>"; };
+		F2094F631FE27AEC00790E11 /* BDSSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizer.h; sourceTree = "<group>"; };
+		F2094F641FE27AEC00790E11 /* BDSSpeechSynthesizerParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerParams.h; sourceTree = "<group>"; };
+		F2094F651FE27AEC00790E11 /* BDSSynthesizerLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSynthesizerLogLevel.h; sourceTree = "<group>"; };
+		F2094F661FE27AEC00790E11 /* BDSTTSEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSTTSEventManager.h; sourceTree = "<group>"; };
+		F2094F671FE27AEC00790E11 /* BDSSpeechSynthesizerErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerErrors.h; sourceTree = "<group>"; };
+		F2094F681FE27AEC00790E11 /* VoiceRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceRecognizer.m; sourceTree = "<group>"; };
+		F2094F6C1FE27AEC00790E11 /* bds_license.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bds_license.dat; sourceTree = "<group>"; };
+		F2094F6D1FE27AEC00790E11 /* bds_easr_basic_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bds_easr_basic_model.dat; sourceTree = "<group>"; };
+		F2094F6E1FE27AEC00790E11 /* bds_easr_mfe_cmvn.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bds_easr_mfe_cmvn.dat; sourceTree = "<group>"; };
+		F2094F6F1FE27AEC00790E11 /* bds_easr_mfe_dnn.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bds_easr_mfe_dnn.dat; sourceTree = "<group>"; };
+		F2094F701FE27AEC00790E11 /* bds_easr_gramm.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bds_easr_gramm.dat; sourceTree = "<group>"; };
+		F2094F711FE27AEC00790E11 /* bds_easr_wakeup_words.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bds_easr_wakeup_words.dat; sourceTree = "<group>"; };
+		F2094F721FE27AEC00790E11 /* bds_easr_dnn_wakeup_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bds_easr_dnn_wakeup_model.dat; sourceTree = "<group>"; };
+		F2094F751FE27AEC00790E11 /* record_end.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = record_end.caf; sourceTree = "<group>"; };
+		F2094F761FE27AEC00790E11 /* record_start.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = record_start.caf; sourceTree = "<group>"; };
+		F2094F771FE27AEC00790E11 /* record_cancel.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = record_cancel.caf; sourceTree = "<group>"; };
+		F2094F781FE27AEC00790E11 /* record_success.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = record_success.caf; sourceTree = "<group>"; };
+		F2094F791FE27AEC00790E11 /* record_fail.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = record_fail.caf; sourceTree = "<group>"; };
+		F2094F7B1FE27AEC00790E11 /* lightBlue.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lightBlue.bundle; sourceTree = "<group>"; };
+		F2094F7C1FE27AEC00790E11 /* lightOrange.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lightOrange.bundle; sourceTree = "<group>"; };
+		F2094F7D1FE27AEC00790E11 /* darkRed.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = darkRed.bundle; sourceTree = "<group>"; };
+		F2094F7E1FE27AEC00790E11 /* defaultTheme.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = defaultTheme.bundle; sourceTree = "<group>"; };
+		F2094F7F1FE27AEC00790E11 /* lightGreen.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lightGreen.bundle; sourceTree = "<group>"; };
+		F2094F801FE27AEC00790E11 /* darkOrange.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = darkOrange.bundle; sourceTree = "<group>"; };
+		F2094F811FE27AEC00790E11 /* defaultFullScreenTheme.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = defaultFullScreenTheme.bundle; sourceTree = "<group>"; };
+		F2094F821FE27AEC00790E11 /* darkGreen.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = darkGreen.bundle; sourceTree = "<group>"; };
+		F2094F831FE27AEC00790E11 /* lightRed.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lightRed.bundle; sourceTree = "<group>"; };
+		F2094F841FE27AEC00790E11 /* darkBlue.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = darkBlue.bundle; sourceTree = "<group>"; };
+		F2094F861FE27AEC00790E11 /* English_Speech_Female.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Speech_Female.dat; sourceTree = "<group>"; };
+		F2094F871FE27AEC00790E11 /* offline_engine_tmp_license.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = offline_engine_tmp_license.dat; sourceTree = "<group>"; };
+		F2094F881FE27AEC00790E11 /* English_Text.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Text.dat; sourceTree = "<group>"; };
+		F2094F891FE27AEC00790E11 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F2094F8A1FE27AEC00790E11 /* English_Speech_Male.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = English_Speech_Male.dat; sourceTree = "<group>"; };
+		F2094F8B1FE27AEC00790E11 /* Chinese_Speech_Male.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Speech_Male.dat; sourceTree = "<group>"; };
+		F2094F8C1FE27AEC00790E11 /* Chinese_Text.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Text.dat; sourceTree = "<group>"; };
+		F2094F8D1FE27AEC00790E11 /* Chinese_Speech_Female.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Speech_Female.dat; sourceTree = "<group>"; };
+		F2094F8E1FE27AEC00790E11 /* VoiceRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceRecognizer.h; sourceTree = "<group>"; };
+		F2094F901FE27AEC00790E11 /* libBaiduSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduSpeechSDK.a; sourceTree = "<group>"; };
+		F2094F911FE27AEC00790E11 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F2094FB51FE27BBC00790E11 /* SogouSpeechSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SogouSpeechSetting.h; sourceTree = "<group>"; };
+		F2094FB61FE27BBC00790E11 /* SogouSemantic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SogouSemantic.h; sourceTree = "<group>"; };
+		F2094FB71FE27BBC00790E11 /* libSogouSemantic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSogouSemantic.a; sourceTree = "<group>"; };
+		F2094FBC1FE285A000790E11 /* SGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGViewController.h; sourceTree = "<group>"; };
+		F2094FBD1FE285A000790E11 /* SGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGViewController.m; sourceTree = "<group>"; };
+		F2094FBF1FE285CA00790E11 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		F2094FC01FE285CA00790E11 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		F22F7F641FDE90E70002498A /* VoiceRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22F7F671FDE90E70002498A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F22F7F681FDE90E70002498A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F22F7F6A1FDE90E70002498A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F22F7F6B1FDE90E70002498A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F22F7F6E1FDE90E70002498A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F22F7F701FDE90E70002498A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F22F7F731FDE90E70002498A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F22F7F751FDE90E70002498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22F7F761FDE90E70002498A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F22F7F7C1FDE90E70002498A /* VoiceRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22F7F801FDE90E70002498A /* VoiceRecognizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceRecognizerTests.m; sourceTree = "<group>"; };
+		F22F7F821FDE90E70002498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22F7F871FDE90E70002498A /* VoiceRecognizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceRecognizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22F7F8B1FDE90E70002498A /* VoiceRecognizerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceRecognizerUITests.m; sourceTree = "<group>"; };
+		F22F7F8D1FDE90E70002498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F22F7F611FDE90E70002498A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2094F4D1FE260ED00790E11 /* CoreTelephony.framework in Frameworks */,
+				F2094FB81FE27BBC00790E11 /* libSogouSemantic.a in Frameworks */,
+				F2094F4B1FE260E300790E11 /* CoreLocation.framework in Frameworks */,
+				F2094F491FE260DA00790E11 /* CFNetwork.framework in Frameworks */,
+				F2094F471FE260D200790E11 /* AudioToolbox.framework in Frameworks */,
+				F2094FB21FE27AED00790E11 /* libBaiduSpeechSDK.a in Frameworks */,
+				F2094F451FE260C900790E11 /* SystemConfiguration.framework in Frameworks */,
+				F2094F431FE260AB00790E11 /* libz.1.2.5.tbd in Frameworks */,
+				F2094F411FE260A200790E11 /* libc++.tbd in Frameworks */,
+				F2094F3F1FE2609400790E11 /* libiconv.2.4.0.tbd in Frameworks */,
+				F2094F3D1FE2608800790E11 /* libstdc++.6.0.9.tbd in Frameworks */,
+				F2094F3B1FE2607F00790E11 /* libsqlite3.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F7F791FDE90E70002498A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F7F841FDE90E70002498A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2094F391FE2607E00790E11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F4C1FE260ED00790E11 /* CoreTelephony.framework */,
+				F2094F4A1FE260E300790E11 /* CoreLocation.framework */,
+				F2094F481FE260DA00790E11 /* CFNetwork.framework */,
+				F2094F461FE260D200790E11 /* AudioToolbox.framework */,
+				F2094F441FE260C900790E11 /* SystemConfiguration.framework */,
+				F2094F421FE260AB00790E11 /* libz.1.2.5.tbd */,
+				F2094F401FE260A200790E11 /* libc++.tbd */,
+				F2094F3E1FE2609400790E11 /* libiconv.2.4.0.tbd */,
+				F2094F3C1FE2608800790E11 /* libstdc++.6.0.9.tbd */,
+				F2094F3A1FE2607F00790E11 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2094F4E1FE27AEC00790E11 /* BaiDu */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F8E1FE27AEC00790E11 /* VoiceRecognizer.h */,
+				F2094F681FE27AEC00790E11 /* VoiceRecognizer.m */,
+				F2094F4F1FE27AEC00790E11 /* BDSClientHeaders */,
+				F2094F691FE27AEC00790E11 /* BDSClientResource */,
+				F2094F8F1FE27AEC00790E11 /* BDSClientLib */,
+			);
+			path = BaiDu;
+			sourceTree = "<group>";
+		};
+		F2094F4F1FE27AEC00790E11 /* BDSClientHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F501FE27AEC00790E11 /* ASR */,
+				F2094F5E1FE27AEC00790E11 /* TTS */,
+			);
+			path = BDSClientHeaders;
+			sourceTree = "<group>";
+		};
+		F2094F501FE27AEC00790E11 /* ASR */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F511FE27AEC00790E11 /* BDSWakeupParameters.h */,
+				F2094F521FE27AEC00790E11 /* BDSASRParameters.h */,
+				F2094F531FE27AEC00790E11 /* BDSEventManager.h */,
+				F2094F541FE27AEC00790E11 /* .gitIgnore */,
+				F2094F551FE27AEC00790E11 /* BDSUploaderDefines.h */,
+				F2094F561FE27AEC00790E11 /* BDSASRDefines.h */,
+				F2094F571FE27AEC00790E11 /* BDSUploaderParameters.h */,
+				F2094F581FE27AEC00790E11 /* BDSWakeupDefines.h */,
+				F2094F591FE27AEC00790E11 /* UIHeaders */,
+			);
+			path = ASR;
+			sourceTree = "<group>";
+		};
+		F2094F591FE27AEC00790E11 /* UIHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F5A1FE27AEC00790E11 /* BDRecognizerViewParamsObject.h */,
+				F2094F5B1FE27AEC00790E11 /* BDRecognizerViewController.h */,
+				F2094F5C1FE27AEC00790E11 /* BDTheme.h */,
+				F2094F5D1FE27AEC00790E11 /* BDRecognizerViewDelegate.h */,
+			);
+			path = UIHeaders;
+			sourceTree = "<group>";
+		};
+		F2094F5E1FE27AEC00790E11 /* TTS */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F5F1FE27AEC00790E11 /* BDSSpeechSynthesizerDelegate.h */,
+				F2094F601FE27AEC00790E11 /* BDS_EttsModelManagerInterface.h */,
+				F2094F611FE27AEC00790E11 /* BDSBuiltInPlayer.h */,
+				F2094F621FE27AEC00790E11 /* BDSMixedModeSynthesizer.h */,
+				F2094F631FE27AEC00790E11 /* BDSSpeechSynthesizer.h */,
+				F2094F641FE27AEC00790E11 /* BDSSpeechSynthesizerParams.h */,
+				F2094F651FE27AEC00790E11 /* BDSSynthesizerLogLevel.h */,
+				F2094F661FE27AEC00790E11 /* BDSTTSEventManager.h */,
+				F2094F671FE27AEC00790E11 /* BDSSpeechSynthesizerErrors.h */,
+			);
+			path = TTS;
+			sourceTree = "<group>";
+		};
+		F2094F691FE27AEC00790E11 /* BDSClientResource */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F6A1FE27AEC00790E11 /* ASR */,
+				F2094F851FE27AEC00790E11 /* TTS */,
+			);
+			path = BDSClientResource;
+			sourceTree = "<group>";
+		};
+		F2094F6A1FE27AEC00790E11 /* ASR */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F6B1FE27AEC00790E11 /* BDSClientEASRResources */,
+				F2094F731FE27AEC00790E11 /* BDSClientResources */,
+			);
+			path = ASR;
+			sourceTree = "<group>";
+		};
+		F2094F6B1FE27AEC00790E11 /* BDSClientEASRResources */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F6C1FE27AEC00790E11 /* bds_license.dat */,
+				F2094F6D1FE27AEC00790E11 /* bds_easr_basic_model.dat */,
+				F2094F6E1FE27AEC00790E11 /* bds_easr_mfe_cmvn.dat */,
+				F2094F6F1FE27AEC00790E11 /* bds_easr_mfe_dnn.dat */,
+				F2094F701FE27AEC00790E11 /* bds_easr_gramm.dat */,
+				F2094F711FE27AEC00790E11 /* bds_easr_wakeup_words.dat */,
+				F2094F721FE27AEC00790E11 /* bds_easr_dnn_wakeup_model.dat */,
+			);
+			path = BDSClientEASRResources;
+			sourceTree = "<group>";
+		};
+		F2094F731FE27AEC00790E11 /* BDSClientResources */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F741FE27AEC00790E11 /* Tone */,
+				F2094F7A1FE27AEC00790E11 /* Theme */,
+			);
+			path = BDSClientResources;
+			sourceTree = "<group>";
+		};
+		F2094F741FE27AEC00790E11 /* Tone */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F751FE27AEC00790E11 /* record_end.caf */,
+				F2094F761FE27AEC00790E11 /* record_start.caf */,
+				F2094F771FE27AEC00790E11 /* record_cancel.caf */,
+				F2094F781FE27AEC00790E11 /* record_success.caf */,
+				F2094F791FE27AEC00790E11 /* record_fail.caf */,
+			);
+			path = Tone;
+			sourceTree = "<group>";
+		};
+		F2094F7A1FE27AEC00790E11 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F7B1FE27AEC00790E11 /* lightBlue.bundle */,
+				F2094F7C1FE27AEC00790E11 /* lightOrange.bundle */,
+				F2094F7D1FE27AEC00790E11 /* darkRed.bundle */,
+				F2094F7E1FE27AEC00790E11 /* defaultTheme.bundle */,
+				F2094F7F1FE27AEC00790E11 /* lightGreen.bundle */,
+				F2094F801FE27AEC00790E11 /* darkOrange.bundle */,
+				F2094F811FE27AEC00790E11 /* defaultFullScreenTheme.bundle */,
+				F2094F821FE27AEC00790E11 /* darkGreen.bundle */,
+				F2094F831FE27AEC00790E11 /* lightRed.bundle */,
+				F2094F841FE27AEC00790E11 /* darkBlue.bundle */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		F2094F851FE27AEC00790E11 /* TTS */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F861FE27AEC00790E11 /* English_Speech_Female.dat */,
+				F2094F871FE27AEC00790E11 /* offline_engine_tmp_license.dat */,
+				F2094F881FE27AEC00790E11 /* English_Text.dat */,
+				F2094F891FE27AEC00790E11 /* .gitignore */,
+				F2094F8A1FE27AEC00790E11 /* English_Speech_Male.dat */,
+				F2094F8B1FE27AEC00790E11 /* Chinese_Speech_Male.dat */,
+				F2094F8C1FE27AEC00790E11 /* Chinese_Text.dat */,
+				F2094F8D1FE27AEC00790E11 /* Chinese_Speech_Female.dat */,
+			);
+			path = TTS;
+			sourceTree = "<group>";
+		};
+		F2094F8F1FE27AEC00790E11 /* BDSClientLib */ = {
+			isa = PBXGroup;
+			children = (
+				F2094F901FE27AEC00790E11 /* libBaiduSpeechSDK.a */,
+				F2094F911FE27AEC00790E11 /* .gitignore */,
+			);
+			path = BDSClientLib;
+			sourceTree = "<group>";
+		};
+		F2094FB41FE27B0100790E11 /* SouGou */ = {
+			isa = PBXGroup;
+			children = (
+				F2094FB71FE27BBC00790E11 /* libSogouSemantic.a */,
+				F2094FB61FE27BBC00790E11 /* SogouSemantic.h */,
+				F2094FB51FE27BBC00790E11 /* SogouSpeechSetting.h */,
+				F20528EF1FE28B670086537B /* SGVoiceRecognizer.h */,
+				F20528F01FE28B670086537B /* SGVoiceRecognizer.m */,
+			);
+			path = SouGou;
+			sourceTree = "<group>";
+		};
+		F22F7F5B1FDE90E70002498A = {
+			isa = PBXGroup;
+			children = (
+				F22F7F661FDE90E70002498A /* VoiceRecognizer */,
+				F22F7F7F1FDE90E70002498A /* VoiceRecognizerTests */,
+				F22F7F8A1FDE90E70002498A /* VoiceRecognizerUITests */,
+				F22F7F651FDE90E70002498A /* Products */,
+				F2094F391FE2607E00790E11 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F22F7F651FDE90E70002498A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F22F7F641FDE90E70002498A /* VoiceRecognizer.app */,
+				F22F7F7C1FDE90E70002498A /* VoiceRecognizerTests.xctest */,
+				F22F7F871FDE90E70002498A /* VoiceRecognizerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F22F7F661FDE90E70002498A /* VoiceRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				F2094FB41FE27B0100790E11 /* SouGou */,
+				F2094F4E1FE27AEC00790E11 /* BaiDu */,
+				F22F7F671FDE90E70002498A /* AppDelegate.h */,
+				F22F7F681FDE90E70002498A /* AppDelegate.m */,
+				F2094FBF1FE285CA00790E11 /* ListViewController.h */,
+				F2094FC01FE285CA00790E11 /* ListViewController.m */,
+				F2094FBC1FE285A000790E11 /* SGViewController.h */,
+				F2094FBD1FE285A000790E11 /* SGViewController.m */,
+				F22F7F6A1FDE90E70002498A /* ViewController.h */,
+				F22F7F6B1FDE90E70002498A /* ViewController.m */,
+				F22F7F6D1FDE90E70002498A /* Main.storyboard */,
+				F22F7F701FDE90E70002498A /* Assets.xcassets */,
+				F22F7F721FDE90E70002498A /* LaunchScreen.storyboard */,
+				F22F7F751FDE90E70002498A /* Info.plist */,
+				F22F7F761FDE90E70002498A /* main.m */,
+			);
+			path = VoiceRecognizer;
+			sourceTree = "<group>";
+		};
+		F22F7F7F1FDE90E70002498A /* VoiceRecognizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F22F7F801FDE90E70002498A /* VoiceRecognizerTests.m */,
+				F22F7F821FDE90E70002498A /* Info.plist */,
+			);
+			path = VoiceRecognizerTests;
+			sourceTree = "<group>";
+		};
+		F22F7F8A1FDE90E70002498A /* VoiceRecognizerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F22F7F8B1FDE90E70002498A /* VoiceRecognizerUITests.m */,
+				F22F7F8D1FDE90E70002498A /* Info.plist */,
+			);
+			path = VoiceRecognizerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F22F7F631FDE90E70002498A /* VoiceRecognizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22F7F901FDE90E70002498A /* Build configuration list for PBXNativeTarget "VoiceRecognizer" */;
+			buildPhases = (
+				F22F7F601FDE90E70002498A /* Sources */,
+				F22F7F611FDE90E70002498A /* Frameworks */,
+				F22F7F621FDE90E70002498A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceRecognizer;
+			productName = VoiceRecognizer;
+			productReference = F22F7F641FDE90E70002498A /* VoiceRecognizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F22F7F7B1FDE90E70002498A /* VoiceRecognizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22F7F931FDE90E70002498A /* Build configuration list for PBXNativeTarget "VoiceRecognizerTests" */;
+			buildPhases = (
+				F22F7F781FDE90E70002498A /* Sources */,
+				F22F7F791FDE90E70002498A /* Frameworks */,
+				F22F7F7A1FDE90E70002498A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F22F7F7E1FDE90E70002498A /* PBXTargetDependency */,
+			);
+			name = VoiceRecognizerTests;
+			productName = VoiceRecognizerTests;
+			productReference = F22F7F7C1FDE90E70002498A /* VoiceRecognizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F22F7F861FDE90E70002498A /* VoiceRecognizerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22F7F961FDE90E70002498A /* Build configuration list for PBXNativeTarget "VoiceRecognizerUITests" */;
+			buildPhases = (
+				F22F7F831FDE90E70002498A /* Sources */,
+				F22F7F841FDE90E70002498A /* Frameworks */,
+				F22F7F851FDE90E70002498A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F22F7F891FDE90E70002498A /* PBXTargetDependency */,
+			);
+			name = VoiceRecognizerUITests;
+			productName = VoiceRecognizerUITests;
+			productReference = F22F7F871FDE90E70002498A /* VoiceRecognizerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F22F7F5C1FDE90E70002498A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Yehua Gao";
+				TargetAttributes = {
+					F22F7F631FDE90E70002498A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F22F7F7B1FDE90E70002498A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F22F7F631FDE90E70002498A;
+					};
+					F22F7F861FDE90E70002498A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F22F7F631FDE90E70002498A;
+					};
+				};
+			};
+			buildConfigurationList = F22F7F5F1FDE90E70002498A /* Build configuration list for PBXProject "VoiceRecognizer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F22F7F5B1FDE90E70002498A;
+			productRefGroup = F22F7F651FDE90E70002498A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F22F7F631FDE90E70002498A /* VoiceRecognizer */,
+				F22F7F7B1FDE90E70002498A /* VoiceRecognizerTests */,
+				F22F7F861FDE90E70002498A /* VoiceRecognizerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F22F7F621FDE90E70002498A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2094F9E1FE27AED00790E11 /* record_success.caf in Resources */,
+				F2094F9F1FE27AED00790E11 /* record_fail.caf in Resources */,
+				F2094F921FE27AED00790E11 /* .gitIgnore in Resources */,
+				F2094FA81FE27AED00790E11 /* lightRed.bundle in Resources */,
+				F2094FA71FE27AED00790E11 /* darkGreen.bundle in Resources */,
+				F2094FA31FE27AED00790E11 /* defaultTheme.bundle in Resources */,
+				F2094FA61FE27AED00790E11 /* defaultFullScreenTheme.bundle in Resources */,
+				F2094F961FE27AED00790E11 /* bds_easr_mfe_cmvn.dat in Resources */,
+				F2094FA11FE27AED00790E11 /* lightOrange.bundle in Resources */,
+				F22F7F741FDE90E70002498A /* LaunchScreen.storyboard in Resources */,
+				F2094FAD1FE27AED00790E11 /* .gitignore in Resources */,
+				F2094FA51FE27AED00790E11 /* darkOrange.bundle in Resources */,
+				F2094FA91FE27AED00790E11 /* darkBlue.bundle in Resources */,
+				F2094F991FE27AED00790E11 /* bds_easr_wakeup_words.dat in Resources */,
+				F2094FAA1FE27AED00790E11 /* English_Speech_Female.dat in Resources */,
+				F2094FB31FE27AED00790E11 /* .gitignore in Resources */,
+				F2094FA41FE27AED00790E11 /* lightGreen.bundle in Resources */,
+				F22F7F711FDE90E70002498A /* Assets.xcassets in Resources */,
+				F2094F971FE27AED00790E11 /* bds_easr_mfe_dnn.dat in Resources */,
+				F2094FAF1FE27AED00790E11 /* Chinese_Speech_Male.dat in Resources */,
+				F2094F951FE27AED00790E11 /* bds_easr_basic_model.dat in Resources */,
+				F2094F981FE27AED00790E11 /* bds_easr_gramm.dat in Resources */,
+				F22F7F6F1FDE90E70002498A /* Main.storyboard in Resources */,
+				F2094F9D1FE27AED00790E11 /* record_cancel.caf in Resources */,
+				F2094FB11FE27AED00790E11 /* Chinese_Speech_Female.dat in Resources */,
+				F2094FA21FE27AED00790E11 /* darkRed.bundle in Resources */,
+				F2094F9A1FE27AED00790E11 /* bds_easr_dnn_wakeup_model.dat in Resources */,
+				F2094FAB1FE27AED00790E11 /* offline_engine_tmp_license.dat in Resources */,
+				F2094FAE1FE27AED00790E11 /* English_Speech_Male.dat in Resources */,
+				F2094F941FE27AED00790E11 /* bds_license.dat in Resources */,
+				F2094FB01FE27AED00790E11 /* Chinese_Text.dat in Resources */,
+				F2094F9B1FE27AED00790E11 /* record_end.caf in Resources */,
+				F2094FA01FE27AED00790E11 /* lightBlue.bundle in Resources */,
+				F2094FAC1FE27AED00790E11 /* English_Text.dat in Resources */,
+				F2094F9C1FE27AED00790E11 /* record_start.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F7F7A1FDE90E70002498A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F7F851FDE90E70002498A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F22F7F601FDE90E70002498A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22F7F6C1FDE90E70002498A /* ViewController.m in Sources */,
+				F20528F11FE28B670086537B /* SGVoiceRecognizer.m in Sources */,
+				F22F7F771FDE90E70002498A /* main.m in Sources */,
+				F2094FC11FE285CA00790E11 /* ListViewController.m in Sources */,
+				F2094F931FE27AED00790E11 /* VoiceRecognizer.m in Sources */,
+				F2094FBE1FE285A000790E11 /* SGViewController.m in Sources */,
+				F22F7F691FDE90E70002498A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F7F781FDE90E70002498A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22F7F811FDE90E70002498A /* VoiceRecognizerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F7F831FDE90E70002498A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22F7F8C1FDE90E70002498A /* VoiceRecognizerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F22F7F7E1FDE90E70002498A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22F7F631FDE90E70002498A /* VoiceRecognizer */;
+			targetProxy = F22F7F7D1FDE90E70002498A /* PBXContainerItemProxy */;
+		};
+		F22F7F891FDE90E70002498A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22F7F631FDE90E70002498A /* VoiceRecognizer */;
+			targetProxy = F22F7F881FDE90E70002498A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F22F7F6D1FDE90E70002498A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F22F7F6E1FDE90E70002498A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F22F7F721FDE90E70002498A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F22F7F731FDE90E70002498A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F22F7F8E1FDE90E70002498A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F22F7F8F1FDE90E70002498A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F22F7F911FDE90E70002498A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U548S69Z84;
+				INFOPLIST_FILE = VoiceRecognizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VoiceRecognizer/BDSClientLib",
+					"$(PROJECT_DIR)/VoiceRecognizer/BaiDu/BDSClientLib",
+					"$(PROJECT_DIR)/VoiceRecognizer/SouGou",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edg.VoiceRecognizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F22F7F921FDE90E70002498A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U548S69Z84;
+				INFOPLIST_FILE = VoiceRecognizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VoiceRecognizer/BDSClientLib",
+					"$(PROJECT_DIR)/VoiceRecognizer/BaiDu/BDSClientLib",
+					"$(PROJECT_DIR)/VoiceRecognizer/SouGou",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edg.VoiceRecognizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F22F7F941FDE90E70002498A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZ29ULHSK9;
+				INFOPLIST_FILE = VoiceRecognizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.edg.VoiceRecognizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceRecognizer.app/VoiceRecognizer";
+			};
+			name = Debug;
+		};
+		F22F7F951FDE90E70002498A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZ29ULHSK9;
+				INFOPLIST_FILE = VoiceRecognizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.edg.VoiceRecognizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceRecognizer.app/VoiceRecognizer";
+			};
+			name = Release;
+		};
+		F22F7F971FDE90E70002498A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZ29ULHSK9;
+				INFOPLIST_FILE = VoiceRecognizerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.edg.VoiceRecognizerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VoiceRecognizer;
+			};
+			name = Debug;
+		};
+		F22F7F981FDE90E70002498A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZ29ULHSK9;
+				INFOPLIST_FILE = VoiceRecognizerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.edg.VoiceRecognizerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VoiceRecognizer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F22F7F5F1FDE90E70002498A /* Build configuration list for PBXProject "VoiceRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22F7F8E1FDE90E70002498A /* Debug */,
+				F22F7F8F1FDE90E70002498A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22F7F901FDE90E70002498A /* Build configuration list for PBXNativeTarget "VoiceRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22F7F911FDE90E70002498A /* Debug */,
+				F22F7F921FDE90E70002498A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22F7F931FDE90E70002498A /* Build configuration list for PBXNativeTarget "VoiceRecognizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22F7F941FDE90E70002498A /* Debug */,
+				F22F7F951FDE90E70002498A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22F7F961FDE90E70002498A /* Build configuration list for PBXNativeTarget "VoiceRecognizerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22F7F971FDE90E70002498A /* Debug */,
+				F22F7F981FDE90E70002498A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F22F7F5C1FDE90E70002498A /* Project object */;
+}

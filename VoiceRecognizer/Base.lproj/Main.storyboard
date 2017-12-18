@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z8O-za-Fgv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--搜狗语音识别-->
+        <scene sceneID="svX-IE-AXZ">
+            <objects>
+                <viewController title="搜狗语音识别" id="MMJ-nm-Gh6" customClass="SGViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flw-jP-gJg"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ax-h9-sQg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XKJ-Q9-KyP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwi-nE-HDL">
+                                <rect key="frame" x="20" y="293.5" width="335" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3IF-ph-DgM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6G-Gl-UIS">
+                                <rect key="frame" x="156" y="607" width="62" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZC2-jz-Cc1"/>
+                                </constraints>
+                                <state key="normal" title="开始识别"/>
+                                <connections>
+                                    <action selector="startRecognize:" destination="MMJ-nm-Gh6" eventType="touchUpInside" id="Ogm-dr-r8w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j6G-Gl-UIS" firstAttribute="centerX" secondItem="XKJ-Q9-KyP" secondAttribute="centerX" id="C3o-08-Mze"/>
+                            <constraint firstItem="0ax-h9-sQg" firstAttribute="top" secondItem="j6G-Gl-UIS" secondAttribute="bottom" constant="20" id="Eoc-6l-2nZ"/>
+                            <constraint firstItem="Pwi-nE-HDL" firstAttribute="leading" secondItem="XKJ-Q9-KyP" secondAttribute="leading" constant="20" id="LdB-3x-uwg"/>
+                            <constraint firstItem="Pwi-nE-HDL" firstAttribute="centerX" secondItem="XKJ-Q9-KyP" secondAttribute="centerX" id="c1R-rJ-ht6"/>
+                            <constraint firstItem="Pwi-nE-HDL" firstAttribute="centerY" secondItem="XKJ-Q9-KyP" secondAttribute="centerY" id="ryY-SE-2B9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="Pwi-nE-HDL" id="VGB-zF-e6N"/>
+                        <outlet property="startBtn" destination="j6G-Gl-UIS" id="2Ua-Qu-8TK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVp-Ac-tzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="-125"/>
+        </scene>
+        <!--百度语音识别-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="百度语音识别" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PXi-2G-nLW"/>
+                        <viewControllerLayoutGuide type="bottom" id="A9M-cD-WNa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ke-1K-vef">
+                                <rect key="frame" x="20" y="294" width="335" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AlP-LU-sja"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfq-xf-Kv0">
+                                <rect key="frame" x="156.5" y="607" width="62" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Hxm-It-8FO"/>
+                                </constraints>
+                                <state key="normal" title="开始识别"/>
+                                <connections>
+                                    <action selector="startRecognize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNA-Fi-k0I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Ke-1K-vef" secondAttribute="trailing" constant="20" id="Cnf-bw-xuA"/>
+                            <constraint firstItem="0Ke-1K-vef" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fi3-Zj-jRF"/>
+                            <constraint firstItem="0Ke-1K-vef" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Hrq-cQ-Zgl"/>
+                            <constraint firstItem="kfq-xf-Kv0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d59-UV-wzj"/>
+                            <constraint firstItem="A9M-cD-WNa" firstAttribute="top" secondItem="kfq-xf-Kv0" secondAttribute="bottom" constant="20" id="prp-pC-Pw0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dXa-a4-zSf"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="0Ke-1K-vef" id="tlr-y3-7Ob"/>
+                        <outlet property="startBtn" destination="kfq-xf-Kv0" id="ca6-G1-mOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="-240"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Aze-7o-b08">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z8O-za-Fgv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lku-6X-YMn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IR9-N9-zO2" kind="relationship" relationship="rootViewController" id="Pye-gv-Kd5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yN9-55-R23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-916" y="-36"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="GnL-3c-i8H">
+            <objects>
+                <tableViewController id="IR9-N9-zO2" customClass="ListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="s33-fF-wSP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="itc-rh-IdJ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pN5-LM-WBb">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pN5-LM-WBb" id="X9l-dd-xqr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="百度语音识别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmO-c6-nRM">
+                                                    <rect key="frame" x="20" y="11" width="335" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="BmO-c6-nRM" secondAttribute="trailing" constant="20" id="9ZY-MB-Ip7"/>
+                                                <constraint firstItem="BmO-c6-nRM" firstAttribute="centerY" secondItem="X9l-dd-xqr" secondAttribute="centerY" id="Cop-r2-BPB"/>
+                                                <constraint firstItem="BmO-c6-nRM" firstAttribute="leading" secondItem="X9l-dd-xqr" secondAttribute="leading" constant="20" id="OZL-2r-ggt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="tF4-Ps-p6H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pK6-lU-def">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pK6-lU-def" id="zLa-g0-yPl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜狗语音识别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcb-ER-x0l">
+                                                    <rect key="frame" x="20" y="12" width="335" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="fcb-ER-x0l" secondAttribute="trailing" constant="20" id="6IP-8w-Q61"/>
+                                                <constraint firstItem="fcb-ER-x0l" firstAttribute="centerY" secondItem="zLa-g0-yPl" secondAttribute="centerY" id="OOL-xk-IWr"/>
+                                                <constraint firstItem="fcb-ER-x0l" firstAttribute="leading" secondItem="zLa-g0-yPl" secondAttribute="leading" constant="20" id="Voa-lr-FAK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MMJ-nm-Gh6" kind="show" id="ryC-4q-tkP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="IR9-N9-zO2" id="zw1-iQ-Jbj"/>
+                            <outlet property="delegate" destination="IR9-N9-zO2" id="Lep-ec-11p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4Hv-TR-lsD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pp6-09-rc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298" y="-55"/>
+        </scene>
+    </scenes>
+</document>
