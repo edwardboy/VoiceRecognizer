@@ -63,6 +63,11 @@
 		F22F7F771FDE90E70002498A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F7F761FDE90E70002498A /* main.m */; };
 		F22F7F811FDE90E70002498A /* VoiceRecognizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F7F801FDE90E70002498A /* VoiceRecognizerTests.m */; };
 		F22F7F8C1FDE90E70002498A /* VoiceRecognizerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F7F8B1FDE90E70002498A /* VoiceRecognizerUITests.m */; };
+		F2DA872E1FEB645800977496 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2DA872D1FEB645800977496 /* iflyMSC.framework */; };
+		F2DA87341FEB83A000977496 /* IFlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DA87331FEB83A000977496 /* IFlyViewController.m */; };
+		F2DA87371FEB89D400977496 /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DA87361FEB89D400977496 /* IATConfig.m */; };
+		F2DA873A1FEB8CA800977496 /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DA87391FEB8CA800977496 /* ISRDataHelper.m */; };
+		F2DA873C1FEB8EC500977496 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2DA873B1FEB8EC500977496 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +178,14 @@
 		F22F7F871FDE90E70002498A /* VoiceRecognizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceRecognizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22F7F8B1FDE90E70002498A /* VoiceRecognizerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceRecognizerUITests.m; sourceTree = "<group>"; };
 		F22F7F8D1FDE90E70002498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2DA872D1FEB645800977496 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		F2DA87321FEB83A000977496 /* IFlyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFlyViewController.h; sourceTree = "<group>"; };
+		F2DA87331FEB83A000977496 /* IFlyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFlyViewController.m; sourceTree = "<group>"; };
+		F2DA87351FEB89D400977496 /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
+		F2DA87361FEB89D400977496 /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
+		F2DA87381FEB8CA800977496 /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
+		F2DA87391FEB8CA800977496 /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
+		F2DA873B1FEB8EC500977496 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DA873C1FEB8EC500977496 /* libz.tbd in Frameworks */,
 				F2094F4D1FE260ED00790E11 /* CoreTelephony.framework in Frameworks */,
 				F2094FB81FE27BBC00790E11 /* libSogouSemantic.a in Frameworks */,
 				F2094F4B1FE260E300790E11 /* CoreLocation.framework in Frameworks */,
@@ -192,6 +206,7 @@
 				F2094F3F1FE2609400790E11 /* libiconv.2.4.0.tbd in Frameworks */,
 				F2094F3D1FE2608800790E11 /* libstdc++.6.0.9.tbd in Frameworks */,
 				F2094F3B1FE2607F00790E11 /* libsqlite3.0.tbd in Frameworks */,
+				F2DA872E1FEB645800977496 /* iflyMSC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +230,7 @@
 		F2094F391FE2607E00790E11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2DA873B1FEB8EC500977496 /* libz.tbd */,
 				F2094F4C1FE260ED00790E11 /* CoreTelephony.framework */,
 				F2094F4A1FE260E300790E11 /* CoreLocation.framework */,
 				F2094F481FE260DA00790E11 /* CFNetwork.framework */,
@@ -423,12 +439,15 @@
 		F22F7F661FDE90E70002498A /* VoiceRecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				F2DA872C1FEB645800977496 /* IFly */,
 				F2094FB41FE27B0100790E11 /* SouGou */,
 				F2094F4E1FE27AEC00790E11 /* BaiDu */,
 				F22F7F671FDE90E70002498A /* AppDelegate.h */,
 				F22F7F681FDE90E70002498A /* AppDelegate.m */,
 				F2094FBF1FE285CA00790E11 /* ListViewController.h */,
 				F2094FC01FE285CA00790E11 /* ListViewController.m */,
+				F2DA87321FEB83A000977496 /* IFlyViewController.h */,
+				F2DA87331FEB83A000977496 /* IFlyViewController.m */,
 				F2094FBC1FE285A000790E11 /* SGViewController.h */,
 				F2094FBD1FE285A000790E11 /* SGViewController.m */,
 				F22F7F6A1FDE90E70002498A /* ViewController.h */,
@@ -458,6 +477,18 @@
 				F22F7F8D1FDE90E70002498A /* Info.plist */,
 			);
 			path = VoiceRecognizerUITests;
+			sourceTree = "<group>";
+		};
+		F2DA872C1FEB645800977496 /* IFly */ = {
+			isa = PBXGroup;
+			children = (
+				F2DA87381FEB8CA800977496 /* ISRDataHelper.h */,
+				F2DA87391FEB8CA800977496 /* ISRDataHelper.m */,
+				F2DA87351FEB89D400977496 /* IATConfig.h */,
+				F2DA87361FEB89D400977496 /* IATConfig.m */,
+				F2DA872D1FEB645800977496 /* iflyMSC.framework */,
+			);
+			path = IFly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -625,12 +656,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DA87341FEB83A000977496 /* IFlyViewController.m in Sources */,
 				F22F7F6C1FDE90E70002498A /* ViewController.m in Sources */,
 				F20528F11FE28B670086537B /* SGVoiceRecognizer.m in Sources */,
+				F2DA87371FEB89D400977496 /* IATConfig.m in Sources */,
 				F22F7F771FDE90E70002498A /* main.m in Sources */,
 				F2094FC11FE285CA00790E11 /* ListViewController.m in Sources */,
 				F2094F931FE27AED00790E11 /* VoiceRecognizer.m in Sources */,
 				F2094FBE1FE285A000790E11 /* SGViewController.m in Sources */,
+				F2DA873A1FEB8CA800977496 /* ISRDataHelper.m in Sources */,
 				F22F7F691FDE90E70002498A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,6 +830,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U548S69Z84;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VoiceRecognizer/IFly",
+				);
 				INFOPLIST_FILE = VoiceRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -816,6 +855,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U548S69Z84;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VoiceRecognizer/IFly",
+				);
 				INFOPLIST_FILE = VoiceRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

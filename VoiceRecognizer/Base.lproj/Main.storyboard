@@ -110,6 +110,53 @@
             </objects>
             <point key="canvasLocation" x="412" y="-240"/>
         </scene>
+        <!--讯飞语音识别-->
+        <scene sceneID="xqt-Yv-d3K">
+            <objects>
+                <viewController title="讯飞语音识别" id="vHt-LW-q0T" customClass="IFlyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jfo-mX-lYZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pzh-Qj-gWa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Goh-kp-ky7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbE-3Y-YiW">
+                                <rect key="frame" x="156.5" y="594" width="62" height="30"/>
+                                <state key="normal" title="开始识别"/>
+                                <connections>
+                                    <action selector="startRecognize:" destination="vHt-LW-q0T" eventType="touchUpInside" id="hRF-HB-7Sc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIt-uz-3bJ">
+                                <rect key="frame" x="20" y="293.5" width="335" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="gYU-Sw-2hl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fbE-3Y-YiW" firstAttribute="centerX" secondItem="Goh-kp-ky7" secondAttribute="centerX" id="0rx-gk-95e"/>
+                            <constraint firstItem="gIt-uz-3bJ" firstAttribute="centerX" secondItem="Goh-kp-ky7" secondAttribute="centerX" id="Mxb-4x-rgs"/>
+                            <constraint firstItem="gIt-uz-3bJ" firstAttribute="leading" secondItem="Goh-kp-ky7" secondAttribute="leading" constant="20" id="SBn-aG-deX"/>
+                            <constraint firstItem="gIt-uz-3bJ" firstAttribute="centerY" secondItem="Goh-kp-ky7" secondAttribute="centerY" id="pIp-yO-ipL"/>
+                            <constraint firstItem="Pzh-Qj-gWa" firstAttribute="top" secondItem="fbE-3Y-YiW" secondAttribute="bottom" constant="43" id="rbR-wI-LXT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="gIt-uz-3bJ" id="pgI-tl-oPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8Q-mE-2Ml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="404"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aze-7o-b08">
             <objects>
@@ -185,6 +232,30 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="MMJ-nm-Gh6" kind="show" id="ryC-4q-tkP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PyX-22-bxt">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PyX-22-bxt" id="rWm-Uo-Mes">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="讯飞语音识别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yJ-Jc-pri">
+                                                    <rect key="frame" x="20" y="12" width="335" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="7yJ-Jc-pri" secondAttribute="trailing" constant="20" id="13d-JF-M4U"/>
+                                                <constraint firstItem="7yJ-Jc-pri" firstAttribute="centerY" secondItem="rWm-Uo-Mes" secondAttribute="centerY" id="9ZB-My-Wgu"/>
+                                                <constraint firstItem="7yJ-Jc-pri" firstAttribute="leading" secondItem="rWm-Uo-Mes" secondAttribute="leading" constant="20" id="vEm-hA-3hk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vHt-LW-q0T" kind="show" id="82r-9Y-Oaa"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
